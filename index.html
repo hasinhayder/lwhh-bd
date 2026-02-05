@@ -61,34 +61,33 @@
             animation: fadeIn 1.2s ease-out;
         }
 
-        .logo-mark {
-            display: inline-flex;
+        .logo-grid {
+            display: inline-grid;
+            grid-template-columns: repeat(2, 40px);
+            grid-template-rows: repeat(2, 40px);
+            gap: 2px;
+            margin-bottom: 2rem;
+            animation: fadeIn 1.2s ease-out;
+            background-color: #fff;
+            border: 2px solid #fff;
+            border-radius: 2px;
+        }
+
+        .logo-box {
+            display: flex;
             justify-content: center;
             align-items: center;
-            padding: 0 1rem;
-            height: 64px;
-            margin-bottom: 2rem;
-            border-radius: 16px;
-            background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01));
-            border: 1px solid var(--glass-border);
-            box-shadow: 0 0 30px rgba(59, 130, 246, 0.15);
-            font-weight: 700;
-            font-size: 1.25rem;
-            color: var(--text-primary);
-            position: relative;
+            font-weight: 900;
+            font-size: 1.5rem;
+            color: white;
         }
-        
-        .logo-mark::after {
-            content: '';
-            position: absolute;
-            inset: -1px;
-            border-radius: 16px;
-            padding: 1px;
-            background: linear-gradient(135deg, rgba(255,255,255,0.2), transparent);
-            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-            -webkit-mask-composite: xor;
-            mask-composite: exclude;
-            pointer-events: none;
+
+        .logo-box.black {
+            background-color: #000;
+        }
+
+        .logo-box.red {
+            background-color: #ef4444; /* Vibrant red matching the logo */
         }
 
         h1 {
@@ -167,9 +166,14 @@
 <body>
 
     <main class="main-content">
-        <div class="logo-mark">LWHH</div>
+        <div class="logo-grid">
+            <div class="logo-box black">L</div>
+            <div class="logo-box black">W</div>
+            <div class="logo-box red">H</div>
+            <div class="logo-box red">H</div>
+        </div>
         
-        <h1>Deconstruct. Build. Excel!</h1>
+        <h1>Deconstruct. Build. Excel.</h1>
         
         <p class="subtitle">
             Master <strong>WordPress, PHP, DevOps, and JavaScript</strong> with depth and precision. Professional engineering mentorship by Hasin Hayder.
